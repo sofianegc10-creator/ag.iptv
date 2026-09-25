@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>MAX TV PRO — Abonnements IPTV</title>
-  <meta name="description" content="MAX TV PRO - Abonnements Full Paquette et Family Paquette">
+  <meta name="description" content="MAX TV PRO - Full Paquette et Family Paquette">
 
   <style>
     * {
@@ -17,8 +17,8 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at top, #4d0000 0%, #120000 35%, #050505 75%);
-      color: white;
+        radial-gradient(circle at top, #520000 0%, #150000 35%, #050505 80%);
+      color: #fff;
       min-height: 100vh;
     }
 
@@ -27,9 +27,9 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(5, 5, 5, 0.95);
+      background: rgba(5,5,5,.96);
       border-bottom: 2px solid #d4a017;
-      padding: 12px 5%;
+      padding: 14px 5%;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -41,19 +41,21 @@
       font-weight: 900;
       font-style: italic;
       color: #ffd700;
-      text-shadow:
-        0 0 8px #ff0000,
-        0 0 20px #d4a017;
+      text-shadow: 0 0 10px #ff0000;
     }
 
     .logo-text span {
-      color: white;
+      color: #fff;
+    }
+
+    .logo-text b {
+      color: #ff0000;
     }
 
     nav a {
-      color: white;
+      color: #fff;
       text-decoration: none;
-      margin-left: 25px;
+      margin-left: 22px;
       font-weight: bold;
     }
 
@@ -64,32 +66,32 @@
     /* HERO */
     .hero {
       text-align: center;
-      padding: 60px 20px 35px;
+      padding: 50px 20px 30px;
     }
 
     .hero-badge {
       display: inline-block;
-      background: linear-gradient(135deg, #ff0000, #8b0000);
+      background: linear-gradient(135deg,#ff0000,#720000);
       border: 2px solid #ffd700;
       border-radius: 50px;
-      padding: 8px 22px;
+      padding: 9px 22px;
       font-weight: bold;
       margin-bottom: 20px;
-      box-shadow: 0 0 25px rgba(255, 0, 0, .5);
+      box-shadow: 0 0 25px rgba(255,0,0,.45);
     }
 
     .hero h1 {
-      font-size: clamp(45px, 8vw, 90px);
+      font-size: clamp(45px,8vw,90px);
       font-weight: 1000;
       font-style: italic;
       color: #ffd700;
       text-shadow:
-        3px 3px 0 #800000,
-        0 0 20px #ff0000;
+        3px 3px 0 #700000,
+        0 0 25px #ff0000;
     }
 
     .hero h1 span {
-      color: white;
+      color: #fff;
     }
 
     .hero p {
@@ -99,23 +101,22 @@
       font-size: 18px;
     }
 
-    /* LOGO IMAGE */
     .hero-logo {
-      width: min(850px, 95%);
-      max-height: 430px;
+      width: min(900px,95%);
+      max-height: 450px;
       object-fit: contain;
       margin: 25px auto;
       display: block;
       border-radius: 20px;
       box-shadow:
-        0 0 30px rgba(255, 0, 0, .45),
-        0 0 60px rgba(212, 160, 23, .2);
+        0 0 35px rgba(255,0,0,.45),
+        0 0 60px rgba(255,215,0,.15);
     }
 
     /* FEATURES */
     .features {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4,1fr);
       gap: 15px;
       max-width: 1200px;
       margin: 30px auto 60px;
@@ -123,8 +124,8 @@
     }
 
     .feature {
-      background: rgba(20, 20, 20, .9);
-      border: 1px solid #6e0000;
+      background: rgba(15,15,15,.9);
+      border: 1px solid #760000;
       border-radius: 15px;
       padding: 20px 10px;
       text-align: center;
@@ -154,11 +155,11 @@
 
     .section-title {
       text-align: center;
-      margin-bottom: 35px;
+      margin-bottom: 40px;
     }
 
     .section-title h2 {
-      font-size: 38px;
+      font-size: 40px;
       color: #ffd700;
       text-transform: uppercase;
       text-shadow: 0 0 15px #ff0000;
@@ -183,100 +184,75 @@
 
     .package-title h3 {
       font-size: 32px;
-      color: white;
+      color: #fff;
       text-transform: uppercase;
     }
 
     .package-title .crown {
-      font-size: 35px;
-    }
-
-    .family .package-title h3 {
-      color: #ffd700;
+      font-size: 34px;
     }
 
     /* CARDS */
     .cards {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4,1fr);
       gap: 18px;
     }
 
     .card {
       position: relative;
       background:
-        linear-gradient(160deg, #210000, #080808 60%, #170000);
+        linear-gradient(160deg,#260000,#080808 65%,#180000);
       border: 2px solid #c90000;
       border-radius: 18px;
-      padding: 25px 15px;
+      padding: 24px 14px;
       text-align: center;
+      transition: .3s;
       overflow: hidden;
-      transition: .3s ease;
-      box-shadow: 0 0 20px rgba(255, 0, 0, .15);
+      box-shadow: 0 0 20px rgba(255,0,0,.15);
     }
 
     .card:hover {
       transform: translateY(-8px);
       border-color: #ffd700;
       box-shadow:
-        0 0 25px rgba(255, 0, 0, .45),
-        0 0 35px rgba(255, 215, 0, .15);
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 50%;
-      height: 100%;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,.12),
-        transparent
-      );
-      transform: skewX(-20deg);
-      transition: .6s;
-    }
-
-    .card:hover::before {
-      left: 150%;
+        0 0 30px rgba(255,0,0,.5),
+        0 0 40px rgba(255,215,0,.15);
     }
 
     .duration {
-      font-size: 25px;
+      font-size: 24px;
       font-weight: 900;
-      color: white;
-      background: linear-gradient(135deg, #a00000, #ff0000);
-      border: 1px solid #ff5c5c;
+      color: #fff;
+      background: linear-gradient(135deg,#a00000,#ff0000);
+      border: 1px solid #ff7777;
       border-radius: 10px;
       padding: 10px;
-      margin-bottom: 18px;
     }
 
     .duration span {
       display: block;
-      font-size: 14px;
+      font-size: 13px;
       color: #ffd700;
+      margin-top: 3px;
     }
 
     .price {
-      font-size: 35px;
+      font-size: 34px;
       font-weight: 1000;
       color: #ffd700;
-      margin: 15px 0;
-      text-shadow: 0 0 12px rgba(255, 215, 0, .35);
+      margin: 18px 0;
+      text-shadow: 0 0 12px rgba(255,215,0,.4);
     }
 
     .price small {
       font-size: 16px;
-      color: white;
+      color: #fff;
     }
 
     .mini-logo {
-      width: 70px;
-      height: 50px;
+      width: 75px;
+      height: 55px;
       object-fit: contain;
       margin: 5px auto 15px;
     }
@@ -284,11 +260,11 @@
     .order-btn {
       display: block;
       width: 100%;
-      padding: 13px 8px;
+      padding: 13px 6px;
       border-radius: 10px;
       border: 1px solid #ffd700;
-      background: linear-gradient(135deg, #e00000, #7b0000);
-      color: white;
+      background: linear-gradient(135deg,#e00000,#720000);
+      color: #fff;
       text-decoration: none;
       font-weight: 900;
       text-transform: uppercase;
@@ -296,8 +272,8 @@
     }
 
     .order-btn:hover {
-      background: linear-gradient(135deg, #ffd700, #d59600);
-      color: black;
+      background: linear-gradient(135deg,#ffd700,#c88c00);
+      color: #000;
       transform: scale(1.03);
     }
 
@@ -305,11 +281,11 @@
     .family .card {
       border-color: #9b7300;
       background:
-        linear-gradient(160deg, #1d1500, #080808 60%, #170d00);
+        linear-gradient(160deg,#211700,#080808 65%,#170d00);
     }
 
     .family .duration {
-      background: linear-gradient(135deg, #5c4300, #d4a017);
+      background: linear-gradient(135deg,#5c4300,#d4a017);
       border-color: #ffd700;
     }
 
@@ -321,9 +297,8 @@
       text-align: center;
       border: 2px solid #ffd700;
       border-radius: 25px;
-      background:
-        radial-gradient(circle, #420000, #100000);
-      box-shadow: 0 0 35px rgba(255, 0, 0, .3);
+      background: radial-gradient(circle,#450000,#100000);
+      box-shadow: 0 0 35px rgba(255,0,0,.3);
     }
 
     .cta h2 {
@@ -341,7 +316,7 @@
       display: inline-block;
       padding: 16px 35px;
       background: #25d366;
-      color: white;
+      color: #fff;
       text-decoration: none;
       border-radius: 50px;
       font-weight: 900;
@@ -363,13 +338,14 @@
     }
 
     /* MOBILE */
-    @media (max-width: 900px) {
+    @media(max-width:900px) {
+
       .cards {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
       }
 
       .features {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
       }
 
       nav {
@@ -377,14 +353,15 @@
       }
     }
 
-    @media (max-width: 600px) {
+    @media(max-width:600px) {
+
       .cards {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2,1fr);
         gap: 10px;
       }
 
       .card {
-        padding: 15px 8px;
+        padding: 14px 7px;
       }
 
       .price {
@@ -392,28 +369,23 @@
       }
 
       .duration {
-        font-size: 20px;
-      }
-
-      .hero {
-        padding-top: 35px;
+        font-size: 19px;
       }
 
       .hero h1 {
         font-size: 48px;
       }
 
+      .package-title h3 {
+        font-size: 22px;
+      }
+
       .features {
-        grid-template-columns: 1fr 1fr;
         gap: 8px;
       }
 
       .feature {
         padding: 14px 5px;
-      }
-
-      .package-title h3 {
-        font-size: 23px;
       }
     }
   </style>
@@ -422,6 +394,7 @@
 <body>
 
 <header>
+
   <div class="logo-text">
     MAX<span>TV</span> <b>PRO</b>
   </div>
@@ -432,29 +405,34 @@
     <a href="#family">Family Paquette</a>
     <a href="#contact">Contact</a>
   </nav>
+
 </header>
 
 
 <main id="accueil">
 
   <!-- HERO -->
+
   <section class="hero">
 
     <div class="hero-badge">
-      👑 MAX TV PRO — PREMIUM IPTV
+      👑 MAX TV PRO — PREMIUM
     </div>
 
-    <h1>MAX<span>TV</span> PRO</h1>
+    <h1>
+      MAX<span>TV</span> PRO
+    </h1>
 
     <p>
-      Découvrez nos abonnements <strong>FULL PAQUETTE</strong>
-      et <strong>FAMILY PAQUETTE</strong>.
+      Choisissez votre abonnement
+      <strong>FULL PAQUETTE</strong> ou
+      <strong>FAMILY PAQUETTE</strong>.
     </p>
 
-    <!-- Mets ici ton image générée -->
+    <!-- IMAGE MAX TV PRO -->
     <img
       src="max-tv-pro.png"
-      alt="MAX TV PRO"
+      alt="Logo MAX TV PRO"
       class="hero-logo"
     >
 
@@ -462,6 +440,7 @@
 
 
   <!-- FEATURES -->
+
   <section class="features">
 
     <div class="feature">
@@ -479,7 +458,7 @@
     <div class="feature">
       <div class="feature-icon">⚽</div>
       <strong>SPORT</strong>
-      <small>Compétitions sportives</small>
+      <small>Compétitions</small>
     </div>
 
     <div class="feature">
@@ -491,28 +470,50 @@
   </section>
 
 
-  <!-- PACKAGES -->
+  <!-- ABONNEMENTS -->
+
   <section class="packages">
 
     <div class="section-title">
-      <h2>Nos abonnements</h2>
-      <p>Choisissez votre formule MAX TV PRO</p>
+
+      <h2>
+        Nos abonnements
+      </h2>
+
+      <p>
+        MAX TV PRO — choisissez votre formule
+      </p>
+
     </div>
 
 
     <!-- FULL PAQUETTE -->
-    <section class="package-section" id="full">
+
+    <section
+      class="package-section"
+      id="full"
+    >
 
       <div class="package-title">
+
         <span class="crown">👑</span>
-        <h3>FULL PAQUETTE</h3>
+
+        <h3>
+          FULL PAQUETTE
+        </h3>
+
         <span class="crown">👑</span>
+
       </div>
+
 
       <div class="cards">
 
-        <!-- 1 MOIS -->
+
+        <!-- FULL 01 MOIS -->
+
         <div class="card">
+
           <div class="duration">
             01 MOIS
             <span>FULL PAQUETTE</span>
@@ -522,16 +523,27 @@
             1 200 <small>DA</small>
           </div>
 
-          <img src="max-tv-pro.png" class="mini-logo" alt="MAX TV PRO">
+          <img
+            src="max-tv-pro.png"
+            class="mini-logo"
+            alt="MAX TV PRO"
+          >
 
-          <a href="#contact" class="order-btn">
+          <a
+            href="https://wa.me/213778400102?text=Bonjour%20MAX%20TV%20PRO%2C%20je%20souhaite%20commander%20la%20FULL%20PAQUETTE%2001%20MOIS%20%C3%A0%201200%20DA."
+            target="_blank"
+            class="order-btn"
+          >
             🛒 COMMANDER
           </a>
+
         </div>
 
 
-        <!-- 3 MOIS -->
+        <!-- FULL 03 MOIS -->
+
         <div class="card">
+
           <div class="duration">
             03 MOIS
             <span>FULL PAQUETTE</span>
@@ -541,16 +553,27 @@
             2 000 <small>DA</small>
           </div>
 
-          <img src="max-tv-pro.png" class="mini-logo" alt="MAX TV PRO">
+          <img
+            src="max-tv-pro.png"
+            class="mini-logo"
+            alt="MAX TV PRO"
+          >
 
-          <a href="#contact" class="order-btn">
+          <a
+            href="https://wa.me/213778400102?text=Bonjour%20MAX%20TV%20PRO%2C%20je%20souhaite%20commander%20la%20FULL%20PAQUETTE%2003%20MOIS%20%C3%A0%202000%20DA."
+            target="_blank"
+            class="order-btn"
+          >
             🛒 COMMANDER
           </a>
+
         </div>
 
 
-        <!-- 6 MOIS -->
+        <!-- FULL 06 MOIS -->
+
         <div class="card">
+
           <div class="duration">
             06 MOIS
             <span>FULL PAQUETTE</span>
@@ -560,16 +583,27 @@
             3 000 <small>DA</small>
           </div>
 
-          <img src="max-tv-pro.png" class="mini-logo" alt="MAX TV PRO">
+          <img
+            src="max-tv-pro.png"
+            class="mini-logo"
+            alt="MAX TV PRO"
+          >
 
-          <a href="#contact" class="order-btn">
+          <a
+            href="https://wa.me/213778400102?text=Bonjour%20MAX%20TV%20PRO%2C%20je%20souhaite%20commander%20la%20FULL%20PAQUETTE%2006%20MOIS%20%C3%A0%203000%20DA."
+            target="_blank"
+            class="order-btn"
+          >
             🛒 COMMANDER
           </a>
+
         </div>
 
 
-        <!-- 12 MOIS -->
+        <!-- FULL 12 MOIS -->
+
         <div class="card">
+
           <div class="duration">
             12 MOIS
             <span>FULL PAQUETTE</span>
@@ -579,30 +613,52 @@
             5 000 <small>DA</small>
           </div>
 
-          <img src="max-tv-pro.png" class="mini-logo" alt="MAX TV PRO">
+          <img
+            src="max-tv-pro.png"
+            class="mini-logo"
+            alt="MAX TV PRO"
+          >
 
-          <a href="#contact" class="order-btn">
+          <a
+            href="https://wa.me/213778400102?text=Bonjour%20MAX%20TV%20PRO%2C%20je%20souhaite%20commander%20la%20FULL%20PAQUETTE%2012%20MOIS%20%C3%A0%205000%20DA."
+            target="_blank"
+            class="order-btn"
+          >
             🛒 COMMANDER
           </a>
+
         </div>
 
       </div>
+
     </section>
 
 
-
     <!-- FAMILY PAQUETTE -->
-    <section class="package-section family" id="family">
+
+    <section
+      class="package-section family"
+      id="family"
+    >
 
       <div class="package-title">
+
         <span class="crown">👨‍👩‍👧‍👦</span>
-        <h3>FAMILY PAQUETTE</h3>
+
+        <h3>
+          FAMILY PAQUETTE
+        </h3>
+
       </div>
+
 
       <div class="cards">
 
-        <!-- 1 MOIS -->
+
+        <!-- FAMILY 01 MOIS -->
+
         <div class="card">
+
           <div class="duration">
             01 MOIS
             <span>FAMILY PAQUETTE</span>
@@ -612,16 +668,27 @@
             800 <small>DA</small>
           </div>
 
-          <img src="max-tv-pro.png" class="mini-logo" alt="MAX TV PRO">
+          <img
+            src="max-tv-pro.png"
+            class="mini-logo"
+            alt="MAX TV PRO"
+          >
 
-          <a href="#contact" class="order-btn">
+          <a
+            href="https://wa.me/213778400102?text=Bonjour%20MAX%20TV%20PRO%2C%20je%20souhaite%20commander%20la%20FAMILY%20PAQUETTE%2001%20MOIS%20%C3%A0%20800%20DA."
+            target="_blank"
+            class="order-btn"
+          >
             🛒 COMMANDER
           </a>
+
         </div>
 
 
-        <!-- 3 MOIS -->
+        <!-- FAMILY 03 MOIS -->
+
         <div class="card">
+
           <div class="duration">
             03 MOIS
             <span>FAMILY PAQUETTE</span>
@@ -631,16 +698,27 @@
             1 500 <small>DA</small>
           </div>
 
-          <img src="max-tv-pro.png" class="mini-logo" alt="MAX TV PRO">
+          <img
+            src="max-tv-pro.png"
+            class="mini-logo"
+            alt="MAX TV PRO"
+          >
 
-          <a href="#contact" class="order-btn">
+          <a
+            href="https://wa.me/213778400102?text=Bonjour%20MAX%20TV%20PRO%2C%20je%20souhaite%20commander%20la%20FAMILY%20PAQUETTE%2003%20MOIS%20%C3%A0%201500%20DA."
+            target="_blank"
+            class="order-btn"
+          >
             🛒 COMMANDER
           </a>
+
         </div>
 
 
-        <!-- 6 MOIS -->
+        <!-- FAMILY 06 MOIS -->
+
         <div class="card">
+
           <div class="duration">
             06 MOIS
             <span>FAMILY PAQUETTE</span>
@@ -650,16 +728,27 @@
             2 200 <small>DA</small>
           </div>
 
-          <img src="max-tv-pro.png" class="mini-logo" alt="MAX TV PRO">
+          <img
+            src="max-tv-pro.png"
+            class="mini-logo"
+            alt="MAX TV PRO"
+          >
 
-          <a href="#contact" class="order-btn">
+          <a
+            href="https://wa.me/213778400102?text=Bonjour%20MAX%20TV%20PRO%2C%20je%20souhaite%20commander%20la%20FAMILY%20PAQUETTE%2006%20MOIS%20%C3%A0%202200%20DA."
+            target="_blank"
+            class="order-btn"
+          >
             🛒 COMMANDER
           </a>
+
         </div>
 
 
-        <!-- 12 MOIS -->
+        <!-- FAMILY 12 MOIS -->
+
         <div class="card">
+
           <div class="duration">
             12 MOIS
             <span>FAMILY PAQUETTE</span>
@@ -669,31 +758,46 @@
             4 000 <small>DA</small>
           </div>
 
-          <img src="max-tv-pro.png" class="mini-logo" alt="MAX TV PRO">
+          <img
+            src="max-tv-pro.png"
+            class="mini-logo"
+            alt="MAX TV PRO"
+          >
 
-          <a href="#contact" class="order-btn">
+          <a
+            href="https://wa.me/213778400102?text=Bonjour%20MAX%20TV%20PRO%2C%20je%20souhaite%20commander%20la%20FAMILY%20PAQUETTE%2012%20MOIS%20%C3%A0%204000%20DA."
+            target="_blank"
+            class="order-btn"
+          >
             🛒 COMMANDER
           </a>
+
         </div>
 
       </div>
+
     </section>
 
   </section>
 
 
   <!-- CONTACT -->
-  <section class="cta" id="contact">
 
-    <h2>👑 MAX TV PRO</h2>
+  <section
+    class="cta"
+    id="contact"
+  >
+
+    <h2>
+      👑 MAX TV PRO
+    </h2>
 
     <p>
-      Choisissez votre abonnement et contactez-nous pour votre commande.
+      Commandez directement sur WhatsApp
     </p>
 
-    <!-- Remplace le lien par ton numéro WhatsApp -->
     <a
-      href="https://wa.me/"
+      href="https://wa.me/213778400102?text=Bonjour%20MAX%20TV%20PRO%2C%20je%20souhaite%20un%20abonnement."
       target="_blank"
       class="cta-btn"
     >
@@ -706,9 +810,18 @@
 
 
 <footer>
+
   <strong>MAX TV PRO</strong>
+
   <br><br>
+
+  WhatsApp :
+  <strong>0778 40 01 02</strong>
+
+  <br><br>
+
   © 2026 MAX TV PRO — Tous droits réservés.
+
 </footer>
 
 
